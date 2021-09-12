@@ -1,0 +1,29 @@
+@page
+@model PomagajLocaly.Pages.Admin.CreateOffer
+@{
+    ViewData["Title"] = "Create offer type";
+}
+<h1>@ViewData["Title"]</h1>
+<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form method="post">
+                <hr/>
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="OfferTypeModel.Name"></label>
+                    <input asp-for="OfferTypeModel.Name" class="form-control"/>
+                    <span asp-validation-for="OfferTypeModel.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="OfferTypeModel.Description"></label>
+                    <input asp-for="OfferTypeModel.Description" class="form-control"/>
+                    <span asp-validation-for="OfferTypeModel.Description" class="text-danger"></span>
+                </div>
+               <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Create offer type</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+@page
+@model PomagajLocaly.Pages.Admin.Admin
+
+
+@{
+    ViewData["Title"] = "Admin Panel";
+}
+
+<h1>@ViewData["Title"]</h1>
+<ul class="nav nav-pills flex-column">
+    <li class="nav-item">
+        <a class="nav-link " asp-area="" asp-page="/Admin/CreateOffer">Create offer type</a>
+        <a class="nav-link " asp-area="" asp-page="/Admin/UpdateOffer">Update offer type</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " asp-area="" asp-page="/Admin/AccountManager">Manage users accounts</a>
+    </li>
+</ul>

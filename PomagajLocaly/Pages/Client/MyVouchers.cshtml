@@ -1,0 +1,27 @@
+@page
+@model PomagajLocaly.Pages.Client.MyVouchers
+
+
+<div>
+    <h4>Vouchers</h4>
+    <hr/>
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th>Name </th>
+            <th>Start Amount </th>
+            <th>Current Amount </th>
+           </tr>
+        </thead>
+        <tbody>
+        @foreach (var voucher in Model.Vouchers)
+        {
+            <tr>
+                <td>@Html.DisplayFor(model => voucher.Offer.Name) </td>
+                <td>@Html.DisplayFor(model => voucher.StartAmount)</td>
+                <td>@Html.DisplayFor(model => voucher.CurrentAmount)</td>
+                </tr>
+        }
+        </tbody>
+    </table>
+</div>
